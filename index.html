@@ -1,46 +1,34 @@
-<html>
-
-<head>
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-    <style>
-        h1 {
-            text-align: center;
-            font-family: 'proxima-nova', sans-serif;
-        }
-
-        p {
-            text-align: center;
-            font-family: 'proxima-nova', sans-serif;
-        }
-
-        div {
-
-            text-align: center;
-            font-family: 'proxima-nova', sans-serif;
-            padding: 50px;
-        }
-
-        h3 {
-            background-color: #dfecec;
-            border-radius: 10px;
-
-        }
-    </style>
-    <title>Mech Eng 100 Project: Handwashing🚰</title>
-</head>
-
-<body>
-    <div>
-        <h1>
-            🚰 Handwashing Summary 🚰
-        </h1>
-        <h3>
-            🙌 Here's your handwashing day summary so far! Keep up the good work 🙌
-        </h3>
-        <iframe class="airtable-embed" src="https://airtable.com/embed/shr5a0l5V1UmUDmCo?backgroundColor=yellow&viewControls=on" frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;"></iframe>
-        <h3>
-            📆 Let's take a look at how much you've washed your hands over the past month 📆
-        </h3>
-        <iframe class="airtable-embed" src="https://airtable.com/embed/shrq6Ka0AJFciMEuN?backgroundColor=yellow&viewControls=on" frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;"></iframe>
-    </div>
-</body>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="./style/css/styles.css">
+        
+    </head> 
+    <body>
+        <div class="container">
+            <div >
+                <h1 class = "header_text">Do you wanna go out with me ehe</h1>
+            </div>
+            <div class="gif_container">
+                <img src="https://media.giphy.com/media/LnKonfpQ44fNvuGLkA/giphy.gif" alt="Cute animated illustration">
+            </div>
+            <div class = "buttons">
+                <button class="btn" id = "yesButton" onclick="nextPage()">Yes</button>
+                <button class="btn" id="noButton" onmouseover="moveButton()">No</button>
+                <script>
+                    function nextPage() {
+                        window.location.href = "yes.html";
+                    }
+                    
+                    function moveButton() {
+                        var x = Math.random() * (window.innerWidth - document.getElementById('noButton').offsetWidth);
+                        var y = Math.random() * (window.innerHeight - document.getElementById('noButton').offsetHeight);
+                        document.getElementById('noButton').style.left = `${x}px`;
+                        document.getElementById('noButton').style.top = `${y}px`;
+                    }
+                </script> 
+            </div>
+        </div>
+       
+    </body> 
+</html>
