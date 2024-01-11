@@ -1,0 +1,42 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: stretch;
+    height: 100vh;
+    background-color: #F8C8DC;
+    color: white;
+}
+img {
+    display: block;
+    margin-top: 10px;
+    width: 100%;
+    object-fit: contain;
+}
+.polaroid {
+    width: 80%;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: auto;
+    max-width: 600px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    border: 15px solid white;
+    border-bottom: 20px solid white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.polaroid img {
+    width: 100%;
+    height: auto;
+}
+
+.polaroid figcaption {
+    text-align: center;
+    color: black;
+    width: 90%;
+    font-size: 16px;
+    align-self: center;
+}
