@@ -1,0 +1,38 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="./style/css/styles.css">
+        
+    </head> 
+    <body>
+        <div class="button_grid">
+            <button class="stacked_btn" date="2024-01-01T00:00:00.000-08:00">
+                <img src="./style/images/IMG_8037.JPG">
+                new years day &#x1F61A;
+            </button>
+            <button class="stacked_btn" date="2024-03-21T00:00:00.000-08:00">my birthday</button>
+            <button class="stacked_btn" date="2024-06-04T00:00:00.000-08:00">our 1 year</button>
+            <button class="stacked_btn" date="2024-07-04T00:00:00.000-08:00">the day you graduated</button>
+            <button class="stacked_btn" date="2024-12-28T00:00:00.000-08:00">your birthday</button>
+        </div>
+       <script>
+        function checkDateAndDisableButton() {
+            var buttons = document.querySelectorAll('.stacked_btn');
+            var now = new Date();
+            buttons.forEach(button => {
+                var buttonDate = new Date(button.getAttribute('date'));
+                console.log(button.getAttribute('date'));
+                if (buttonDate > now) {
+                    button.disabled = true;
+                    button.textContent = 'Check back on ' + buttonDate.toLocaleDateString() + ' 😙';
+                } else {
+                    button.disabled = false;
+                }
+            });
+        }
+        window.onload = checkDateAndDisableButton;
+       </script>
+    </body> 
+</html>

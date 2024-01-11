@@ -12,8 +12,19 @@
             <div class="gif_container">
                 <img src="./style/images/cute-cat.gif" alt="Cute animated illustration">
             </div>
-            <p class = "text"> See you soon for a suprise!</p>
+            <button class="btn" id = "yesButton" onclick="nextPage()">Press this if you miss me</button>
         </div>
-       
+        <script>
+            function nextPage() {
+                window.location.href = "notes.html";
+            }
+            
+            function moveButton() {
+                var x = Math.random() * (window.innerWidth - document.getElementById('noButton').offsetWidth);
+                var y = Math.random() * (window.innerHeight - document.getElementById('noButton').offsetHeight);
+                document.getElementById('noButton').style.left = `${x}px`;
+                document.getElementById('noButton').style.top = `${y}px`;
+            }
+        </script> 
     </body> 
 </html>
